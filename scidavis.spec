@@ -1,6 +1,6 @@
 Name:		scidavis
 Version:	0.2.3
-Release:	%mkrel 1
+Release:	%mkrel 2
 Summary:	An application for Scientific Data Analysis and Visualization
 License:	GPLv2
 Group:		Sciences/Other
@@ -69,7 +69,6 @@ install -D -m644 %{name}/translations/*.qm %{buildroot}%{_datadir}/%{name}/trans
 desktop-file-install	--remove-category=Physics \
 	--remove-category=Math \
 	--remove-category=Graphics \
-	--add-category=Education \
 	--add-category=DataVisualization \
 	--dir %{buildroot}%{_datadir}/applications \
 	%{buildroot}/%{_datadir}/applications/%{name}.desktop 
