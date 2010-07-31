@@ -1,14 +1,12 @@
 Name:		scidavis
-Version:	0.2.3
-Release:	%mkrel 5
+Version:	0.2.4
+Release:	%mkrel 1
 Summary:	An application for Scientific Data Analysis and Visualization
 License:	GPLv2
 Group:		Sciences/Other
 Url:		http://scidavis.sourceforge.net/
 Source0:	http://download.sourceforge.net/sourceforge/scidavis/%{name}-%{version}.tar.bz2
-Patch0:		scidavis-0.2.3-link-everything-dynamically.patch
-# patch from Fedora
-Patch1:		scidavis-0.2.3-sip49.patch
+Patch0:		scidavis-0.2.4-link-everything-dynamically.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires:	desktop-file-utils
@@ -47,15 +45,13 @@ features such as scriptability and extensibility.
 %prep
 %setup -q
 %patch0 -p1 -b .dynamically
-%patch1 -p1
-# fix libsuffix
-for i in `find -name '*.pro'`
-do
-  sed -i -e "s:/usr/lib\$\${libsuff}:%{_prefix}/%{_lib}:g" $i
-done
 
 %build
-%qmake_qt4
+%qmake_qt4 \
+	%if "%{_lib}" != "lib"
+		libsuff=64 \
+	%endif
+
 %make
 
 %install
