@@ -1,6 +1,6 @@
 Name:		scidavis
 Version:	0.2.3
-Release:	%mkrel 4
+Release:	%mkrel 5
 Summary:	An application for Scientific Data Analysis and Visualization
 License:	GPLv2
 Group:		Sciences/Other
@@ -13,6 +13,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires:	desktop-file-utils
 BuildRequires:	qt4-devel >= 4.3
+BuildRequires:	qt-assistant-adp-devel
 Buildrequires:	python-qt4-devel >= 4.2
 BuildRequires:	python-devel >= 2.5
 BuildRequires:	python-sip >= 4.6
