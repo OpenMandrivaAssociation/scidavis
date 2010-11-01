@@ -1,6 +1,6 @@
 Name:		scidavis
 Version:	0.2.4
-Release:	%mkrel 1
+Release:	%mkrel 2
 Summary:	An application for Scientific Data Analysis and Visualization
 License:	GPLv2
 Group:		Sciences/Other
