@@ -4,7 +4,7 @@ Release:	%mkrel 2
 Summary:	An application for Scientific Data Analysis and Visualization
 License:	GPLv2
 Group:		Sciences/Other
-Url:		http://scidavis.sourceforge.net/
+Url:		https://scidavis.sourceforge.net/
 Source0:	http://download.sourceforge.net/sourceforge/scidavis/%{name}-%{version}.tar.bz2
 Patch0:		scidavis-0.2.4-link-everything-dynamically.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
