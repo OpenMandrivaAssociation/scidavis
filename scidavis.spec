@@ -9,6 +9,7 @@ Source0:	http://download.sourceforge.net/sourceforge/scidavis/%{name}-%{version}
 Patch0:		scidavis-0.2.4-link-everything-dynamically.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
+BuildRequires:	make
 BuildRequires:	desktop-file-utils
 BuildRequires:	qt4-devel >= 4.3
 BuildRequires:	qt-assistant-adp-devel
